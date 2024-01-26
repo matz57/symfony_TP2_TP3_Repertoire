@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Dashboard Apipen{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="{{ asset('styles/app.css') }}" rel="stylesheet">
+        {% endblock %}
+    </head>
+     <header>
+        <nav>
+            <ul>
+                <li><a href="{{ path('app_pen_index') }}">Stylos</a></li>
+                <li><a href="{{ path('app_brand_index') }}">Marques</a></li>
+                <li><a href="{{ path('app_color_index') }}">Couleurs</a></li>
+                <li><a href="{{ path('app_type_index') }}">Type</a></li>
+                <li><a href="{{ path('app_material_index') }}">Matériaux</a></li>
+                <li><a href="{{ path('app_user_index') }}">Utilisateurs</a></li>
+            </ul>
+        </nav>
+    </header>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>
